@@ -1,0 +1,9 @@
+{
+  "name": "@monorepo",
+  "pnpm": {
+    "overrides": {
+      "undici": "5.5.1",
+      "rollup": "2.75.7"
+    }
+  }
+}

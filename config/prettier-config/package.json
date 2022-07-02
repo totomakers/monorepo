@@ -1,0 +1,6 @@
+{
+  "name": "@monorepo/prettier-config",
+  "private": "true",
+  "main": "index.json",
+  "version": "0.0.0"
+}

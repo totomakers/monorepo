@@ -1,0 +1,12 @@
+{
+	"root": true,
+	"extends": [
+		"@monorepo/eslint-config-react",
+		"@monorepo/eslint-config-graphql"
+	],
+	"ignorePatterns": [
+		"**/*.generated.tsx",
+		"/src/graphql/introspection.json",
+		"/src/graphql/types.ts"
+	]
+}

@@ -1,13 +1,20 @@
-# Monorepo example
+# Monorepo
 
-Use [pnpm](https://pnpm.io/fr/) workspace for monorepo ❤️
+Example of monorepo using some *new* and *fancy* libs
+Some new way for building perfect startup
 
 ## Apps
 
-Include all apps - api, client, or mobile apps
+- [API](/apps/api/readme.md)
+- [Frontend SPA](/apps/frontend-spa/readme.md)
 
 
 ## Libs
 
-Some code shared between apps
+- [UIKit](/libs/uikit/readme.md)
 
+## Config
+
+- [eslint-config-react](/config/eslint-config-react/readme.md)
+- [eslint-config-graphql](/config/eslint-config-graphql/readme.md)
+- [prettier-config](/config/prettier-config/readme.md)

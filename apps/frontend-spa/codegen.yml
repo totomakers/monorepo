@@ -1,0 +1,21 @@
+watch: true
+schema: 'http://localhost:3000/graphql'
+documents: 'src/**/*.gql'
+generates:
+  src/graphql/types.ts:
+    plugins:
+      - 'typescript'
+  src/graphql/introspection.json:
+    plugins:
+      - urql-introspection
+  src/:
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: graphql/types.ts
+      extension: .generated.tsx
+    plugins:
+      - typescript-operations
+      - typescript-urql
+    config:
+      withHooks: true
+      strictScalars: true
