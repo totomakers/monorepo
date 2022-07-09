@@ -7,7 +7,9 @@
     "index.js"
   ],
   "peerDependencies": {
-    "eslint": ">= 3"
+    "eslint": "> 7",
+    "prettier": "> 2",
+    "graphql": "> 14"
   },
   "dependencies": {
     "@graphql-eslint/eslint-plugin": "^3.10.4"
