@@ -1,7 +1,11 @@
 # Monorepo
 
 Example of monorepo using some *new* and *fancy* libs
-Some new way for building perfect startup
+Some new way for building perfect startup 
+
+## JS Monorepo Task runner
+
+- [Lage](https://microsoft.github.io/lage)
 
 ## Apps
 
