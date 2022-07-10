@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { styled } from '@linaria/react';
+import { ReactNode } from 'react';
 
 export type ButtonProps = {
 	children?: ReactNode;

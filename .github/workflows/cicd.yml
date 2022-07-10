@@ -1,0 +1,54 @@
+name: CI/CD
+on: [push]
+jobs:
+  bootstrapping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+      - name: 📦 Install dependencies
+        run: pnpm install
+  
+  lint:
+    needs: bootstrapping
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+      - name: 📦 Install dependencies
+        run: pnpm install
+      - name: 💄 Lint
+        run: pnpm lage lint
+    
+  build:
+    needs: [lint] 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+      - name: 📦 Install dependencies
+        run: pnpm install
+      - name: ⚡Build
+        run: pnpm lage build
+    
